@@ -1,15 +1,6 @@
-# Railway Management System API - IRCTC
 
-This repository contains the implementation of a Railway Management System API inspired by the IRCTC platform. The system allows users to check available trains, book seats, and retrieve booking details. The platform includes a role-based access system, where admins can manage trains, and users can perform tasks like checking availability and booking seats.
 
-## Problem Statement
 
-You are tasked with building an API that handles the following:
-1. User registration and login functionality.
-2. Train management for admins, including adding trains with source and destination.
-3. Seat availability checking for users between two stations.
-4. Seat booking functionality that handles race conditions efficiently when multiple users attempt to book seats simultaneously.
-5. Specific booking details retrieval.
 
 The API ensures proper user authentication using JWT tokens and protects admin routes using an API key.
 
@@ -119,65 +110,6 @@ Before running this application, make sure you have:
 - `GET /api/user/bookings` - View user's bookings
 - `DELETE /api/user/bookings/:id` - Cancel booking
 
-## Error Handling
 
-The API implements a standardized error handling mechanism:
-- Validation errors (400)
-- Authentication errors (401)
-- Authorization errors (403)
-- Not found errors (404)
-- Server errors (500)
-
-## Security Measures
-
-1. **Authentication**: JWT-based token authentication
-2. **Password Security**: Bcrypt hashing
-3. **Headers**: Security headers via Helmet
-4. **CORS**: Configured CORS policy
-5. **Rate Limiting**: API rate limiting
-6. **Input Validation**: Request validation
-7. **SQL Injection Protection**: TypeORM parameterized queries
-
-## Development
-
-```bash
-# Run in development mode
-npm run dev
-
-# Run tests
-npm test
-
-# Run linting
-npm run lint
 ```
 
-## Production Deployment
-
-1. Set environment variables for production
-2. Build the application
-3. Start the server using PM2 or similar process manager
-
-```bash
-npm install -g pm2
-pm2 start src/server.js
-```
-
-## Health Check
-
-The API includes a health check endpoint at `/health` that returns the current status of the application and its dependencies.
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Support
-
-For support, email support@railwaymanagementsystem.com or create an issue in the repository.
