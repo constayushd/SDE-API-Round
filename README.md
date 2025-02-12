@@ -53,42 +53,7 @@ Before running this application, make sure you have:
 2. PostgreSQL (v12 or higher)
 3. npm (Node Package Manager)
 
-## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/railway-management-system.git
-   cd railway-management-system
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Create a PostgreSQL database:
-   ```sql
-   CREATE DATABASE railway_management;
-   ```
-
-4. Create a `.env` file in the root directory:
-   ```env
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_USER=postgres
-   DB_PASSWORD=your_postgres_password
-   DB_NAME=railway_management
-   NODE_ENV=development
-   PORT=3000
-   ```
-
-5. Start the server:
-   ```bash
-   # Development mode
-   npm run dev
-
-   # Production mode
-   npm start
    ```
 
 ## API Endpoints
